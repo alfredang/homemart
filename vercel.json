@@ -1,4 +1,7 @@
 {
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "framework": null,
   "rewrites": [
     { "source": "/api/create-web-call", "destination": "/api/create-web-call" },
     { "source": "/api/chat", "destination": "/api/chat" }
