@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomeMart - Household Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Nav -->
+    <nav id="navbar">
+      <div class="nav-inner">
+        <a href="#" class="logo">Home<span>Mart</span></a>
+        <ul class="nav-links">
+          <li><a href="#products">Products</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact" class="nav-cta">Shop Now</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="badge">Trusted Household Brands</div>
+        <h1>Your One-Stop Shop for <span class="highlight">Quality Home Products</span></h1>
+        <p>Browse our curated selection of household essentials from top brands. Talk to our AI assistant for personalized product recommendations.</p>
+        <div class="hero-buttons">
+          <a href="#products" class="btn btn-primary">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Browse Products
+          </a>
+          <a href="javascript:void(0)" class="btn btn-secondary" onclick="startVoiceCall()">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            Talk to Alex (AI)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Products</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">15+</div>
+          <div class="stat-label">Top Brands</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">$3-$650</div>
+          <div class="stat-label">Price Range</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">AI Assistant</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Products -->
+    <section id="products">
+      <div class="section-header">
+        <h2>Our Products</h2>
+        <p>Browse our curated selection of household essentials from trusted brands.</p>
+      </div>
+      <div class="products-grid" id="products-grid">
+        <!-- Populated by main.js -->
+      </div>
+    </section>
+
+    <!-- Why Us -->
+    <section id="why-us">
+      <div class="section-header">
+        <h2>Why Choose HomeMart</h2>
+        <p>We make shopping for household products simple, smart, and satisfying.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature">
+          <div class="feature-icon">&#129302;</div>
+          <div>
+            <h3>AI Shopping Assistant</h3>
+            <p>Talk to Alex, our voice-powered AI, to get personalized product recommendations instantly.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">&#127942;</div>
+          <div>
+            <h3>Trusted Brands</h3>
+            <p>We carry only reputable brands like Dyson, Samsung, KitchenAid, Philips, and more.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">&#128176;</div>
+          <div>
+            <h3>Best Prices</h3>
+            <p>Competitive pricing across all categories -- from everyday essentials to premium appliances.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">&#128666;</div>
+          <div>
+            <h3>Fast Delivery</h3>
+            <p>Quick and reliable delivery right to your doorstep with order tracking.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">&#128260;</div>
+          <div>
+            <h3>Easy Returns</h3>
+            <p>Hassle-free returns within 30 days if you're not completely satisfied.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">&#128222;</div>
+          <div>
+            <h3>24/7 Support</h3>
+            <p>Our AI assistant is always available to help you find the perfect product.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+      <div class="section-header">
+        <h2>What Our Customers Say</h2>
+        <p>Hear from shoppers who love their HomeMart purchases.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"The Dyson V11 is a game-changer! Alex helped me compare it with the Samsung Robot Vacuum and I made the perfect choice for my home."</blockquote>
+          <div class="testimonial-author">
+            <div class="avatar">ML</div>
+            <div>
+              <div class="name">Michelle Lim</div>
+              <div class="role">Verified Buyer</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"I love how I can just talk to the AI assistant and get instant recommendations. Ended up getting the Philips Air Fryer -- best purchase ever!"</blockquote>
+          <div class="testimonial-author">
+            <div class="avatar">RK</div>
+            <div>
+              <div class="name">Raj Kumar</div>
+              <div class="role">Verified Buyer</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"Great selection of kitchen appliances. The KitchenAid Stand Mixer arrived in perfect condition. Will definitely shop here again!"</blockquote>
+          <div class="testimonial-author">
+            <div class="avatar">SC</div>
+            <div>
+              <div class="name">Sarah Chen</div>
+              <div class="role">Verified Buyer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+      <div class="cta-box">
+        <h2>Need Help Choosing?</h2>
+        <p>Talk to Alex, our AI voice assistant, to get personalized product recommendations based on your needs and budget.</p>
+        <a href="javascript:void(0)" class="btn btn-primary" onclick="startVoiceCall()">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Alex Now
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-left">
+          <a href="#" class="logo">Home<span>Mart</span></a>
+          <p>&copy; 2026 HomeMart. All rights reserved.</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="#products">Products</a></li>
+          <li><a href="#why-us">About</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Custom Chat/Talk Popup -->
+    <div class="assistant-popup" id="assistant-popup">
+      <div class="ap-header">
+        <div class="ap-header-left">
+          <div class="ap-avatar-large">A</div>
+          <div>
+            <div class="ap-name">Alex</div>
+            <div class="ap-role"><span class="ap-online"></span> AI Shopping Assistant</div>
+          </div>
+        </div>
+        <button class="ap-close" id="ap-close" aria-label="Close">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <div class="ap-body">
+        <div class="ap-options">
+          <button class="ap-option ap-option-active" id="ap-chat-btn">
+            <div class="ap-option-icon ap-icon-chat">
+              <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="ap-option-label">Chat</div>
+            <div class="ap-option-desc">Type your message</div>
+          </button>
+          <button class="ap-option" id="ap-talk-btn">
+            <div class="ap-option-icon ap-icon-talk">
+              <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            </div>
+            <div class="ap-option-label">Talk</div>
+            <div class="ap-option-desc">Voice conversation</div>
+          </button>
+        </div>
+
+        <div class="ap-messages" id="ap-messages">
+          <div class="chat-message alex">
+            <p>Hi! I'm Alex, your AI shopping assistant. How can I help you today? Ask me about products, prices, or get recommendations!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ap-footer">
+        <div class="ap-input-row">
+          <input type="text" class="ap-input" id="ap-input" placeholder="Type your message..." />
+          <button class="ap-send" id="ap-send-btn" aria-label="Send">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </div>
+        <div class="ap-quick">
+          <div class="ap-quick-label">QUICK QUESTIONS</div>
+          <div class="ap-quick-chips">
+            <button class="ap-chip" data-q="What vacuum do you recommend?">Vacuums</button>
+            <button class="ap-chip" data-q="Show me products under $100">Under $100</button>
+            <button class="ap-chip" data-q="What kitchen appliances do you have?">Kitchen</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Assistant Button -->
+    <button class="assistant-fab" id="assistant-fab" aria-label="Open assistant">
+      <span class="fab-avatar">A</span>
+      <span class="fab-pulse"></span>
+    </button>
+
+    <!-- Voice Call Modal -->
+    <div class="voice-modal" id="voice-modal">
+      <div class="vm-card">
+        <div class="vm-avatar" id="vm-avatar">
+          <div class="vm-avatar-inner">A</div>
+          <div class="vm-ripple"></div>
+          <div class="vm-ripple vm-ripple-2"></div>
+          <div class="vm-ripple vm-ripple-3"></div>
+        </div>
+        <div class="vm-name">Alex</div>
+        <div class="vm-status" id="vm-status">Connecting...</div>
+        <div class="vm-timer" id="vm-timer">00:00</div>
+        <button class="vm-hangup" id="vm-hangup" aria-label="End call">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
