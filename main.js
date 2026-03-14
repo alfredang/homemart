@@ -5,45 +5,86 @@ const CREATE_WEB_CALL_URL = "/api/create-web-call";
 
 // ── Product Data (from household_products.csv) ──
 const PRODUCTS = [
-  { brand: "Dyson", price: 499, name: "Vacuum Cleaner V11", description: "Cordless high-power vacuum cleaner with advanced filtration" },
-  { brand: "Philips", price: 89, name: "Air Fryer Essential", description: "Healthy air fryer that uses rapid air technology for low oil cooking" },
-  { brand: "Panasonic", price: 120, name: "Microwave Oven NN-ST34", description: "Compact microwave oven with multiple cooking modes" },
-  { brand: "LG", price: 650, name: "Smart Washing Machine 7kg", description: "Energy efficient front load washing machine with smart features" },
-  { brand: "Samsung", price: 320, name: "Robot Vacuum VR5000", description: "Automatic robot vacuum cleaner with smart navigation" },
-  { brand: "Tefal", price: 45, name: "Non-Stick Frying Pan 28cm", description: "Durable frying pan with titanium non-stick coating" },
-  { brand: "Sharp", price: 210, name: "Air Purifier FP-J30E", description: "Removes dust and allergens using Plasmacluster technology" },
-  { brand: "Xiaomi", price: 60, name: "Electric Kettle Smart Pro", description: "Temperature controlled smart kettle with mobile app support" },
-  { brand: "Black+Decker", price: 55, name: "Steam Iron BXIR2400", description: "Powerful steam iron with anti-drip and self-clean function" },
-  { brand: "Bosch", price: 180, name: "Hand Mixer MFQ4080", description: "Multi-speed hand mixer with whisk and dough hook attachments" },
-  { brand: "Brita", price: 35, name: "Water Filter Pitcher Marella", description: "Water filtration jug that reduces chlorine and impurities" },
-  { brand: "Zojirushi", price: 150, name: "Rice Cooker NS-TSC10", description: "Automatic rice cooker with fuzzy logic cooking control" },
-  { brand: "KitchenAid", price: 420, name: "Stand Mixer Artisan", description: "Professional stand mixer with multiple attachment options" },
-  { brand: "Hamilton Beach", price: 70, name: "Blender Power Elite", description: "High-performance blender for smoothies and food processing" },
-  { brand: "Nestle", price: 12, name: "Instant Coffee Gold Blend", description: "Premium instant coffee with rich aroma and smooth taste" },
-  { brand: "Colgate", price: 4, name: "Total Toothpaste 150g", description: "Fluoride toothpaste for complete oral protection" },
-  { brand: "Dettol", price: 6, name: "Antibacterial Hand Wash", description: "Kills 99.9% of germs and provides long-lasting hygiene" },
-  { brand: "Scotch-Brite", price: 3, name: "Scrub Sponge Pack", description: "Multi-purpose scrub sponges for kitchen cleaning" },
-  { brand: "Pledge", price: 7, name: "Furniture Polish Spray", description: "Cleans and protects wooden furniture surfaces" },
-  { brand: "Glad", price: 10, name: "Trash Bags 30L", description: "Durable garbage bags with leak protection for household waste" },
+  { brand: "Dyson", price: 499, name: "Vacuum Cleaner V11", description: "Cordless high-power vacuum cleaner with advanced filtration", category: "cleaning", emoji: "🧹", tag: "Premium" },
+  { brand: "Philips", price: 89, name: "Air Fryer Essential", description: "Healthy air fryer that uses rapid air technology for low oil cooking", category: "kitchen", emoji: "🍳", tag: "Popular" },
+  { brand: "Panasonic", price: 120, name: "Microwave Oven NN-ST34", description: "Compact microwave oven with multiple cooking modes", category: "kitchen", emoji: "📡" },
+  { brand: "LG", price: 650, name: "Smart Washing Machine 7kg", description: "Energy efficient front load washing machine with smart features", category: "appliance", emoji: "👕", tag: "Smart" },
+  { brand: "Samsung", price: 320, name: "Robot Vacuum VR5000", description: "Automatic robot vacuum cleaner with smart navigation", category: "cleaning", emoji: "🤖", tag: "Smart" },
+  { brand: "Tefal", price: 45, name: "Non-Stick Frying Pan 28cm", description: "Durable frying pan with titanium non-stick coating", category: "kitchen", emoji: "🍳" },
+  { brand: "Sharp", price: 210, name: "Air Purifier FP-J30E", description: "Removes dust and allergens using Plasmacluster technology", category: "appliance", emoji: "🌬️", tag: "Health" },
+  { brand: "Xiaomi", price: 60, name: "Electric Kettle Smart Pro", description: "Temperature controlled smart kettle with mobile app support", category: "kitchen", emoji: "☕", tag: "Smart" },
+  { brand: "Black+Decker", price: 55, name: "Steam Iron BXIR2400", description: "Powerful steam iron with anti-drip and self-clean function", category: "appliance", emoji: "👔" },
+  { brand: "Bosch", price: 180, name: "Hand Mixer MFQ4080", description: "Multi-speed hand mixer with whisk and dough hook attachments", category: "kitchen", emoji: "🥣" },
+  { brand: "Brita", price: 35, name: "Water Filter Pitcher Marella", description: "Water filtration jug that reduces chlorine and impurities", category: "kitchen", emoji: "💧" },
+  { brand: "Zojirushi", price: 150, name: "Rice Cooker NS-TSC10", description: "Automatic rice cooker with fuzzy logic cooking control", category: "kitchen", emoji: "🍚", tag: "Best Seller" },
+  { brand: "KitchenAid", price: 420, name: "Stand Mixer Artisan", description: "Professional stand mixer with multiple attachment options", category: "kitchen", emoji: "🎂", tag: "Premium" },
+  { brand: "Hamilton Beach", price: 70, name: "Blender Power Elite", description: "High-performance blender for smoothies and food processing", category: "kitchen", emoji: "🥤" },
+  { brand: "Nestle", price: 12, name: "Instant Coffee Gold Blend", description: "Premium instant coffee with rich aroma and smooth taste", category: "care", emoji: "☕" },
+  { brand: "Colgate", price: 4, name: "Total Toothpaste 150g", description: "Fluoride toothpaste for complete oral protection", category: "care", emoji: "🦷" },
+  { brand: "Dettol", price: 6, name: "Antibacterial Hand Wash", description: "Kills 99.9% of germs and provides long-lasting hygiene", category: "care", emoji: "🧴" },
+  { brand: "Scotch-Brite", price: 3, name: "Scrub Sponge Pack", description: "Multi-purpose scrub sponges for kitchen cleaning", category: "cleaning", emoji: "🧽" },
+  { brand: "Pledge", price: 7, name: "Furniture Polish Spray", description: "Cleans and protects wooden furniture surfaces", category: "cleaning", emoji: "✨" },
+  { brand: "Glad", price: 10, name: "Trash Bags 30L", description: "Durable garbage bags with leak protection for household waste", category: "cleaning", emoji: "🗑️" },
 ];
 
+let currentFilter = "all";
+
 // ── Render Products ──
-function renderProducts() {
+function renderProducts(filter = "all") {
   const grid = document.getElementById("products-grid");
   if (!grid) return;
-  grid.innerHTML = PRODUCTS.map(p => `
-    <div class="product-card">
-      <div class="product-brand">${p.brand}</div>
-      <h3>${p.name}</h3>
-      <p class="product-desc">${p.description}</p>
-      <div class="product-footer">
-        <span class="product-price">$${p.price}</span>
+
+  const filtered = filter === "all" ? PRODUCTS : PRODUCTS.filter(p => p.category === filter);
+
+  grid.innerHTML = filtered.map(p => `
+    <div class="product-card" data-category="${p.category}">
+      <div class="product-card-visual">
+        <span class="product-emoji">${p.emoji}</span>
+      </div>
+      <div class="product-card-body">
+        <div class="product-brand">${p.brand}</div>
+        <h3>${p.name}</h3>
+        <p class="product-desc">${p.description}</p>
+        <div class="product-footer">
+          <span class="product-price">$${p.price}</span>
+          ${p.tag ? `<span class="product-tag">${p.tag}</span>` : ''}
+        </div>
       </div>
     </div>
   `).join("");
 }
 
-document.addEventListener("DOMContentLoaded", renderProducts);
+// ── Product Filtering ──
+function setupFilters() {
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentFilter = btn.dataset.filter;
+      renderProducts(currentFilter);
+    });
+  });
+
+  // Category cards also trigger filter
+  document.querySelectorAll(".category-card").forEach(card => {
+    card.addEventListener("click", (e) => {
+      e.preventDefault();
+      const cat = card.dataset.category;
+      currentFilter = cat;
+      filterBtns.forEach(b => {
+        b.classList.toggle("active", b.dataset.filter === cat);
+      });
+      renderProducts(cat);
+      document.getElementById("products").scrollIntoView({ behavior: "smooth" });
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderProducts();
+  setupFilters();
+});
 
 // ── Retell client ──
 const retellClient = new RetellWebClient();
@@ -63,6 +104,35 @@ const hangupBtn = document.getElementById("vm-hangup");
 window.addEventListener("scroll", () => {
   nav.classList.toggle("scrolled", window.scrollY > 10);
 });
+
+// ── Mobile Nav ──
+const hamburger = document.getElementById("nav-hamburger");
+const mobileNav = document.getElementById("mobile-nav");
+const mobileOverlay = document.getElementById("mobile-nav-overlay");
+const mobileClose = document.getElementById("mobile-nav-close");
+
+function openMobileNav() {
+  mobileNav.classList.add("active");
+  mobileOverlay.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeMobileNav() {
+  mobileNav.classList.remove("active");
+  mobileOverlay.classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+if (hamburger) {
+  hamburger.addEventListener("click", openMobileNav);
+  mobileClose.addEventListener("click", closeMobileNav);
+  mobileOverlay.addEventListener("click", closeMobileNav);
+
+  // Close on link click
+  document.querySelectorAll(".mobile-nav-links a").forEach(link => {
+    link.addEventListener("click", closeMobileNav);
+  });
+}
 
 // ── Voice call functions ──
 function showModal() {

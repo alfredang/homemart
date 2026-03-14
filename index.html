@@ -3,202 +3,344 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HomeMart - Household Products</title>
+    <title>HomeMart - Curated Living Essentials</title>
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Nav -->
-    <nav id="navbar">
-      <div class="nav-inner">
-        <a href="#" class="logo">Home<span>Mart</span></a>
-        <ul class="nav-links">
-          <li><a href="#products">Products</a></li>
-          <li><a href="#why-us">Why Us</a></li>
+    <div class="page-shell">
+      <nav id="navbar">
+        <div class="nav-inner">
+          <a href="#" class="logo">
+            <img src="logo.svg" alt="HomeMart" class="logo-icon" width="32" height="32" />
+            Home<span>Mart</span>
+          </a>
+          <ul class="nav-links">
+            <li><a href="#products">Collection</a></li>
+            <li><a href="#why-us">Experience</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact" class="nav-cta">Talk to Alex</a></li>
+          </ul>
+          <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile nav drawer -->
+      <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+      <div class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-close">
+          <button id="mobile-nav-close" aria-label="Close menu">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <ul class="mobile-nav-links">
+          <li><a href="#products">Collection</a></li>
+          <li><a href="#why-us">Experience</a></li>
           <li><a href="#testimonials">Reviews</a></li>
-          <li><a href="#contact" class="nav-cta">Shop Now</a></li>
+          <li><a href="#contact" class="nav-cta">Talk to Alex</a></li>
         </ul>
       </div>
-    </nav>
 
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-content">
-        <div class="badge">Trusted Household Brands</div>
-        <h1>Your One-Stop Shop for <span class="highlight">Quality Home Products</span></h1>
-        <p>Browse our curated selection of household essentials from top brands. Talk to our AI assistant for personalized product recommendations.</p>
-        <div class="hero-buttons">
-          <a href="#products" class="btn btn-primary">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-            Browse Products
-          </a>
-          <a href="javascript:void(0)" class="btn btn-secondary" onclick="startVoiceCall()">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-            Talk to Alex (AI)
-          </a>
-        </div>
-      </div>
-    </section>
+      <main>
+        <section class="hero">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <div class="badge">Designed for practical, beautiful homes</div>
+              <h1>Everyday home essentials, presented like a <span class="highlight">well-styled room.</span></h1>
+              <p>
+                HomeMart brings appliances, cleaning tools, and kitchen staples into one warm, curated storefront.
+                Browse visually, or ask Alex for fast recommendations that fit your budget and routine.
+              </p>
+              <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                  Explore the collection
+                </a>
+                <a href="javascript:void(0)" class="btn btn-secondary" onclick="startVoiceCall()">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                  Ask Alex by voice
+                </a>
+              </div>
+              <div class="hero-notes">
+                <div class="hero-note">
+                  <span class="hero-note-value">20+</span>
+                  <span class="hero-note-label">household essentials</span>
+                </div>
+                <div class="hero-note">
+                  <span class="hero-note-value">15</span>
+                  <span class="hero-note-label">trusted global brands</span>
+                </div>
+                <div class="hero-note">
+                  <span class="hero-note-value">24/7</span>
+                  <span class="hero-note-label">shopping assistant</span>
+                </div>
+              </div>
+            </div>
 
-    <!-- Stats -->
-    <div class="stats">
-      <div class="stats-grid">
-        <div class="stat">
-          <div class="stat-number">20+</div>
-          <div class="stat-label">Products</div>
+            <div class="hero-stage">
+              <div class="stage-card stage-card-main">
+                <div class="room-scene">
+                  <div class="scene-shelf"></div>
+                  <div class="scene-arch"></div>
+                  <div class="scene-board"></div>
+                  <div class="scene-device scene-device-kettle"></div>
+                  <div class="scene-device scene-device-mixer"></div>
+                  <div class="scene-device scene-device-bowl"></div>
+                  <div class="scene-device scene-device-bottle"></div>
+                </div>
+                <div class="stage-copy">
+                  <div class="eyebrow">Curated room drop</div>
+                  <h2>Kitchen, care, and cleaning picks that feel cohesive together.</h2>
+                  <p>Instead of a noisy catalog, the storefront is grouped around the way a real home works.</p>
+                </div>
+              </div>
+
+              <div class="stage-card stage-card-floating stage-card-price">
+                <div class="stage-mini-label">Weekly spotlight</div>
+                <strong>Air Fryer + Kettle + Mixer</strong>
+                <span>Build a compact prep station under $330.</span>
+              </div>
+
+              <div class="stage-card stage-card-floating stage-card-ai">
+                <div class="stage-mini-label">Alex can help with</div>
+                <ul class="stage-list">
+                  <li>budget-based comparisons</li>
+                  <li>vacuum and appliance picks</li>
+                  <li>kitchen starter bundles</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Category showcase -->
+        <div class="categories">
+          <div class="categories-grid">
+            <a href="#products" class="category-card" data-category="kitchen">
+              <span class="category-icon">🍳</span>
+              <div class="category-name">Kitchen</div>
+              <div class="category-count">8 products</div>
+            </a>
+            <a href="#products" class="category-card" data-category="cleaning">
+              <span class="category-icon">🧹</span>
+              <div class="category-name">Cleaning</div>
+              <div class="category-count">5 products</div>
+            </a>
+            <a href="#products" class="category-card" data-category="appliance">
+              <span class="category-icon">⚡</span>
+              <div class="category-name">Appliances</div>
+              <div class="category-count">5 products</div>
+            </a>
+            <a href="#products" class="category-card" data-category="care">
+              <span class="category-icon">🧴</span>
+              <div class="category-name">Daily Care</div>
+              <div class="category-count">2 products</div>
+            </a>
+          </div>
         </div>
-        <div class="stat">
-          <div class="stat-number">15+</div>
-          <div class="stat-label">Top Brands</div>
+
+        <!-- Promo banners -->
+        <div class="promo-banner">
+          <div class="promo-inner">
+            <div class="promo-card promo-card-green">
+              <span class="promo-emoji">🏠</span>
+              <h3>New apartment? Start here.</h3>
+              <p>Ask Alex to build a starter bundle that covers kitchen, cleaning, and care essentials under your budget.</p>
+              <a href="javascript:void(0)" class="btn" onclick="startVoiceCall()">Ask Alex now</a>
+            </div>
+            <div class="promo-card promo-card-dark">
+              <span class="promo-emoji">🔥</span>
+              <h3>This week's top picks</h3>
+              <p>Dyson V11, KitchenAid Artisan, and Philips Air Fryer are trending among shoppers this week.</p>
+              <a href="#products" class="btn">View collection</a>
+            </div>
+          </div>
         </div>
-        <div class="stat">
-          <div class="stat-number">$3-$650</div>
-          <div class="stat-label">Price Range</div>
+
+        <div class="stats">
+          <div class="stats-grid">
+            <div class="stat">
+              <div class="stat-number">20+</div>
+              <div class="stat-label">Curated products</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">15+</div>
+              <div class="stat-label">Premium brands</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">$3-$650</div>
+              <div class="stat-label">Accessible to premium</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">1 tap</div>
+              <div class="stat-label">to chat or call Alex</div>
+            </div>
+          </div>
         </div>
-        <div class="stat">
-          <div class="stat-number">24/7</div>
-          <div class="stat-label">AI Assistant</div>
+
+        <section id="products">
+          <div class="section-header">
+            <div class="eyebrow">Collection</div>
+            <h2>Household products presented as a visual market wall.</h2>
+            <p>Each card is styled to feel like a small display tile rather than a plain database row.</p>
+          </div>
+          <div class="product-filters" id="product-filters">
+            <button class="filter-btn active" data-filter="all">All Products</button>
+            <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+            <button class="filter-btn" data-filter="cleaning">Cleaning</button>
+            <button class="filter-btn" data-filter="appliance">Appliances</button>
+            <button class="filter-btn" data-filter="care">Daily Care</button>
+          </div>
+          <div class="products-grid" id="products-grid"></div>
+        </section>
+
+        <section id="why-us">
+          <div class="section-split">
+            <div>
+              <div class="section-header section-header-left">
+                <div class="eyebrow">Experience</div>
+                <h2>Built to make practical shopping feel sharper, calmer, and faster.</h2>
+                <p>HomeMart combines editorial layout, useful catalog data, and an AI assistant that can guide decisions instead of just listing specs.</p>
+              </div>
+              <div class="features-grid">
+                <div class="feature">
+                  <div class="feature-icon">AI</div>
+                  <div>
+                    <h3>Voice-led guidance</h3>
+                    <p>Alex helps compare products, recommend alternatives, and narrow choices in seconds.</p>
+                  </div>
+                </div>
+                <div class="feature">
+                  <div class="feature-icon">BR</div>
+                  <div>
+                    <h3>Brand confidence</h3>
+                    <p>Well-known names like Dyson, Samsung, Philips, KitchenAid, Bosch, and more.</p>
+                  </div>
+                </div>
+                <div class="feature">
+                  <div class="feature-icon">$</div>
+                  <div>
+                    <h3>Wide price spread</h3>
+                    <p>From daily essentials to statement appliances, the range supports quick refills and big upgrades.</p>
+                  </div>
+                </div>
+                <div class="feature">
+                  <div class="feature-icon">24</div>
+                  <div>
+                    <h3>Always-on assistant</h3>
+                    <p>Chat or call any time when you need help matching products to a room, need, or budget.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <aside class="service-panel">
+              <div class="service-panel-inner">
+                <div class="eyebrow">Styled bundle idea</div>
+                <h3>New apartment starter mix</h3>
+                <p>Alex can combine cleaning, kitchen, and care essentials into a quick first-home shortlist.</p>
+                <div class="bundle-list">
+                  <div class="bundle-item">
+                    <span>Kitchen core</span>
+                    <strong>Air fryer, kettle, blender</strong>
+                  </div>
+                  <div class="bundle-item">
+                    <span>Cleaning setup</span>
+                    <strong>Vacuum, polish, trash bags</strong>
+                  </div>
+                  <div class="bundle-item">
+                    <span>Everyday care</span>
+                    <strong>Hand wash, toothpaste, filters</strong>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section id="testimonials">
+          <div class="section-header">
+            <div class="eyebrow">Reviews</div>
+            <h2>Customers respond to the speed, clarity, and curated feel.</h2>
+            <p>These examples keep the storefront grounded in practical buying decisions, not just aesthetics.</p>
+          </div>
+          <div class="testimonials-grid">
+            <div class="testimonial">
+              <div class="stars">★★★★★</div>
+              <blockquote>"The Dyson V11 felt expensive, but Alex explained the tradeoff clearly against the robot vacuum. The decision was easy after that."</blockquote>
+              <div class="testimonial-author">
+                <div class="avatar">ML</div>
+                <div>
+                  <div class="name">Michelle Lim</div>
+                  <div class="role">Bought cleaning appliances</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <div class="stars">★★★★★</div>
+              <blockquote>"The site looks more like a designed store than a form. I asked for kitchen picks under $100 and got an answer immediately."</blockquote>
+              <div class="testimonial-author">
+                <div class="avatar">RK</div>
+                <div>
+                  <div class="name">Raj Kumar</div>
+                  <div class="role">Bought kitchen essentials</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial">
+              <div class="stars">★★★★★</div>
+              <blockquote>"I like that the cards actually help me scan the catalog visually. The KitchenAid and rice cooker stood out right away."</blockquote>
+              <div class="testimonial-author">
+                <div class="avatar">SC</div>
+                <div>
+                  <div class="name">Sarah Chen</div>
+                  <div class="role">Repeat buyer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="cta" id="contact">
+          <div class="cta-box">
+            <div class="eyebrow">Personalized recommendations</div>
+            <h2>Want the fastest route to the right product?</h2>
+            <p>Open the assistant or start a voice call and let Alex narrow the catalog for you.</p>
+            <a href="javascript:void(0)" class="btn btn-primary" onclick="startVoiceCall()">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Start a voice consult
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-inner">
+          <div class="footer-left">
+            <a href="#" class="logo">
+              <img src="logo.svg" alt="HomeMart" class="logo-icon" width="28" height="28" />
+              Home<span>Mart</span>
+            </a>
+            <p>&copy; 2026 HomeMart. Curated living essentials with an AI shopping assistant.</p>
+          </div>
+          <ul class="footer-links">
+            <li><a href="#products">Collection</a></li>
+            <li><a href="#why-us">Experience</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Assistant</a></li>
+          </ul>
         </div>
-      </div>
+      </footer>
     </div>
 
-    <!-- Products -->
-    <section id="products">
-      <div class="section-header">
-        <h2>Our Products</h2>
-        <p>Browse our curated selection of household essentials from trusted brands.</p>
-      </div>
-      <div class="products-grid" id="products-grid">
-        <!-- Populated by main.js -->
-      </div>
-    </section>
-
-    <!-- Why Us -->
-    <section id="why-us">
-      <div class="section-header">
-        <h2>Why Choose HomeMart</h2>
-        <p>We make shopping for household products simple, smart, and satisfying.</p>
-      </div>
-      <div class="features-grid">
-        <div class="feature">
-          <div class="feature-icon">&#129302;</div>
-          <div>
-            <h3>AI Shopping Assistant</h3>
-            <p>Talk to Alex, our voice-powered AI, to get personalized product recommendations instantly.</p>
-          </div>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">&#127942;</div>
-          <div>
-            <h3>Trusted Brands</h3>
-            <p>We carry only reputable brands like Dyson, Samsung, KitchenAid, Philips, and more.</p>
-          </div>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">&#128176;</div>
-          <div>
-            <h3>Best Prices</h3>
-            <p>Competitive pricing across all categories -- from everyday essentials to premium appliances.</p>
-          </div>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">&#128666;</div>
-          <div>
-            <h3>Fast Delivery</h3>
-            <p>Quick and reliable delivery right to your doorstep with order tracking.</p>
-          </div>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">&#128260;</div>
-          <div>
-            <h3>Easy Returns</h3>
-            <p>Hassle-free returns within 30 days if you're not completely satisfied.</p>
-          </div>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">&#128222;</div>
-          <div>
-            <h3>24/7 Support</h3>
-            <p>Our AI assistant is always available to help you find the perfect product.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials">
-      <div class="section-header">
-        <h2>What Our Customers Say</h2>
-        <p>Hear from shoppers who love their HomeMart purchases.</p>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testimonial">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>"The Dyson V11 is a game-changer! Alex helped me compare it with the Samsung Robot Vacuum and I made the perfect choice for my home."</blockquote>
-          <div class="testimonial-author">
-            <div class="avatar">ML</div>
-            <div>
-              <div class="name">Michelle Lim</div>
-              <div class="role">Verified Buyer</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>"I love how I can just talk to the AI assistant and get instant recommendations. Ended up getting the Philips Air Fryer -- best purchase ever!"</blockquote>
-          <div class="testimonial-author">
-            <div class="avatar">RK</div>
-            <div>
-              <div class="name">Raj Kumar</div>
-              <div class="role">Verified Buyer</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>"Great selection of kitchen appliances. The KitchenAid Stand Mixer arrived in perfect condition. Will definitely shop here again!"</blockquote>
-          <div class="testimonial-author">
-            <div class="avatar">SC</div>
-            <div>
-              <div class="name">Sarah Chen</div>
-              <div class="role">Verified Buyer</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta" id="contact">
-      <div class="cta-box">
-        <h2>Need Help Choosing?</h2>
-        <p>Talk to Alex, our AI voice assistant, to get personalized product recommendations based on your needs and budget.</p>
-        <a href="javascript:void(0)" class="btn btn-primary" onclick="startVoiceCall()">
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Call Alex Now
-        </a>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <div class="footer-inner">
-        <div class="footer-left">
-          <a href="#" class="logo">Home<span>Mart</span></a>
-          <p>&copy; 2026 HomeMart. All rights reserved.</p>
-        </div>
-        <ul class="footer-links">
-          <li><a href="#products">Products</a></li>
-          <li><a href="#why-us">About</a></li>
-          <li><a href="#testimonials">Reviews</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </footer>
-
-    <!-- Custom Chat/Talk Popup -->
     <div class="assistant-popup" id="assistant-popup">
       <div class="ap-header">
         <div class="ap-header-left">
@@ -220,7 +362,7 @@
               <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
             </div>
             <div class="ap-option-label">Chat</div>
-            <div class="ap-option-desc">Type your message</div>
+            <div class="ap-option-desc">Type your question</div>
           </button>
           <button class="ap-option" id="ap-talk-btn">
             <div class="ap-option-icon ap-icon-talk">
@@ -233,7 +375,7 @@
 
         <div class="ap-messages" id="ap-messages">
           <div class="chat-message alex">
-            <p>Hi! I'm Alex, your AI shopping assistant. How can I help you today? Ask me about products, prices, or get recommendations!</p>
+            <p>Hi! I'm Alex, your AI shopping assistant. Ask for comparisons, budget picks, or a quick starter bundle for your home.</p>
           </div>
         </div>
       </div>
@@ -246,23 +388,21 @@
           </button>
         </div>
         <div class="ap-quick">
-          <div class="ap-quick-label">QUICK QUESTIONS</div>
+          <div class="ap-quick-label">Quick questions</div>
           <div class="ap-quick-chips">
-            <button class="ap-chip" data-q="What vacuum do you recommend?">Vacuums</button>
+            <button class="ap-chip" data-q="What vacuum do you recommend?">Best vacuum</button>
             <button class="ap-chip" data-q="Show me products under $100">Under $100</button>
-            <button class="ap-chip" data-q="What kitchen appliances do you have?">Kitchen</button>
+            <button class="ap-chip" data-q="Suggest a kitchen starter bundle">Kitchen bundle</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Floating Assistant Button -->
     <button class="assistant-fab" id="assistant-fab" aria-label="Open assistant">
       <span class="fab-avatar">A</span>
       <span class="fab-pulse"></span>
     </button>
 
-    <!-- Voice Call Modal -->
     <div class="voice-modal" id="voice-modal">
       <div class="vm-card">
         <div class="vm-avatar" id="vm-avatar">
