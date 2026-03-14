@@ -14,7 +14,7 @@
 
 ## Screenshot
 
-![Screenshot](screenshot.png?v=2)
+![Screenshot](preview.png)
 
 ## About
 
